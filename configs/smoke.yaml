@@ -1,0 +1,30 @@
+project_name: shortcut_counterexamples_colored_mnist_smoke
+
+data:
+  root: ./data
+  train_per_class: 100
+  num_classes: 10
+
+experiment:
+  output_root: ./outputs_smoke
+
+training:
+  epochs: 1
+  batch_size: 256
+  optimizer: adamw
+  weight_decay: 0.0001
+  learning_rate:
+    lenet: 0.001
+    resnet18_mnist: 0.0003
+
+groupdro:
+  step_size: 0.01
+
+dfr:
+  epochs: 5
+  learning_rate: 0.01
+
+evaluation:
+  flip_rate_threshold: 0.10
+  bias_conflict_accuracy_threshold: 0.80
+

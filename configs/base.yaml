@@ -1,0 +1,44 @@
+project_name: shortcut_counterexamples_colored_mnist
+
+data:
+  root: ./data
+  train_total: 50000
+  train_per_class: 5000
+  num_classes: 10
+  num_hues: 10
+  budgets: [0, 50, 100, 250, 500, 1000, 2500, 5000]
+  nested_budgets: true
+  preserve_global_color_marginal: true
+  counterexamples_replace_aligned: true
+
+experiment:
+  seeds: [0, 1, 2, 3, 4]
+  models: [lenet, resnet18_mnist]
+  methods: [erm, groupdro, dfr]
+  output_root: ./outputs
+
+training:
+  epochs: 10
+  batch_size: 256
+  optimizer: adamw
+  weight_decay: 0.0001
+  learning_rate:
+    lenet: 0.001
+    resnet18_mnist: 0.0003
+
+groupdro:
+  group_definition: digit_x_alignment
+  step_size: 0.01
+
+dfr:
+  freeze_backbone: true
+  balanced_reweight_set: true
+  aligned_to_conflict_ratio: 1.0
+  epochs: 30
+  learning_rate: 0.01
+
+evaluation:
+  render_all_hues: true
+  flip_rate_threshold: 0.10
+  bias_conflict_accuracy_threshold: 0.80
+  n80_interpolation: false

@@ -1,0 +1,15 @@
+# Canonical environment for the final 230-run matrix:
+# Python 3.12.3, torch 2.5.1+cu124 (RTX 4090, CUDA 12.4).
+# Unpinned so the code also installs on macOS / newer Python for development.
+torch
+torchvision
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+PyYAML
+tqdm
+pytest
+

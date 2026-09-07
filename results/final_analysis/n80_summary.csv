@@ -1,0 +1,7 @@
+model,method,accuracy_threshold,flip_threshold,median_N,min_N,max_N,mean_N,sd_N,seeds_passing,seeds_total
+lenet,dfr,0.8,0.1,250.0,250,250,250.0,0.0,5,5
+lenet,erm,0.8,0.1,1000.0,1000,2500,1600.0,821.5838362577492,5,5
+lenet,groupdro,0.8,0.1,500.0,250,500,400.0,136.93063937629154,5,5
+resnet18_mnist,dfr,0.8,0.1,1000.0,500,1000,900.0,223.60679774997897,5,5
+resnet18_mnist,erm,0.8,0.1,1000.0,500,2500,1200.0,758.287544405155,5,5
+resnet18_mnist,groupdro,0.8,0.1,500.0,250,500,400.0,136.93063937629154,5,5

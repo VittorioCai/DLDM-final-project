@@ -1,0 +1,28 @@
+# Experiment outputs (1.7G+; summary CSVs live outside the repo)
+outputs*/
+
+# Datasets (MNIST re-downloads via torchvision)
+data/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+# ...except the two LeNet ERM weights Figure 2 needs (852 KB each).
+!paper/assets/checkpoints/**/*.pt
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# AI-tooling planning notes (not part of the shared codebase)
+docs/superpowers/
+
+# Legacy early-workflow files (kept locally, removed from the shared repo)
+legacy/
