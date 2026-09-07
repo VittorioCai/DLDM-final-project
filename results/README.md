@@ -4,6 +4,6 @@ Final 230-run CUDA matrix (AutoDL instance, RTX 4090, PyTorch 2.5.1): per archit
 
 - `main_results.csv` — one row per run: all counterfactual metrics + train/GPU minutes.
 - `run_registry.csv` — run status and config/metrics paths (relative to the raw output tree, which is NOT in the repo: ~1.7 GB, regenerable via `run_matrix.py`).
-- `final_analysis/` — N80 summaries, threshold sensitivity, paired method differences, breaking-curve figures, and the statistical validation report (统计验证报告.md).
+- `final_analysis/` — N80 summaries, threshold sensitivity, paired method differences, breaking-curve figures, and the statistical validation report (`VALIDATION.md`), with a plain-language reading of the numbers in `RESULTS.md`.
 
 Raw per-run outputs and checkpoints stay local; everything here is derived from them by `analyze.py`.
